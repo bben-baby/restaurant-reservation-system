@@ -14,5 +14,10 @@ app.get('/', (req, res) => res.send('Restaurant Reservation API running'));
 
 app.use('/api/auth', require('./routes/authRoutes'));
 
+app.use('/api/tables', require('./routes/tableRoutes'));
+app.use('/api/reservations', require('./routes/reservationRoutes'));
+
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+
